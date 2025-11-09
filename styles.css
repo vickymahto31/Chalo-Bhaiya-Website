@@ -1,0 +1,353 @@
+:root {
+    --primary-color: #007BFF;
+    --accent-color: #FFA500;
+    --card-background: #F8F9FA;
+    --text-color: #212529;
+    --border-color: #DEE2E6;
+    --light-bg: #F8F9FA;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFFFF;
+    color: var(--text-color);
+}
+
+/* Login Page Styles */
+.login-section {
+    min-height: 100vh;
+    background-color: var(--light-bg);
+}
+
+.login-card {
+     background-color: #FFFFFF;
+     padding: 2.5rem;
+     border-radius: 12px;
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+     border: 1px solid var(--border-color);
+     width: 100%;
+     max-width: 450px;
+}
+
+.login-title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* Main App Styles */
+.main-title {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #6B7280;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.form-card {
+     background-color: #FFFFFF;
+     padding: 2rem;
+     border-radius: 12px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+     border: 1px solid var(--border-color);
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.form-control, .form-select {
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+    transition: all 0.2s ease-in-out;
+    border: none;
+}
+
+.btn-primary-custom:hover {
+    background-color: #0069D9;
+    transform: translateY(-2px);
+    color: #FFFFFF;
+}
+
+.btn-accent-custom {
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+    border: none;
+}
+
+.btn-accent-custom:hover {
+    background-color: #e69500;
+    transform: translateY(-1px);
+    color: #FFFFFF;
+}
+
+.ride-card {
+    background-color: var(--card-background);
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out;
+}
+
+.ride-card:hover {
+    transform: scale(1.02);
+}
+
+.ride-card .card-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.ride-card .delete-icon {
+    font-size: 24px;
+    color: #9CA3AF;
+    text-decoration: none;
+}
+
+.ride-card .delete-icon:hover {
+    color: #EF4444;
+}
+
+:root {
+            --primary-color: #007BFF; /* A nice blue for Marwadi theme */
+            --secondary-color: #FFA500; /* Accent orange */
+            --background-color: #f4f7fc;
+            --card-background: #ffffff;
+            --text-color: #333;
+            --light-gray: #e9ecef;
+            --success-color: #28a745;
+            --danger-color: #dc3545;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --border-radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #6c757d;
+        }
+
+        /* Main Content Layout */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr 2fr;
+            }
+        }
+
+        /* Form Styling */
+        .form-container, .rides-container {
+            background: var(--card-background);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        h2 {
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--light-gray);
+            padding-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 0.9rem;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        /* Ride Card Styling */
+        #available-rides-list {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .ride-card {
+            border: 1px solid var(--light-gray);
+            border-left: 5px solid var(--primary-color);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            position: relative;
+            background-color: #fdfdff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .ride-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .ride-card p {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .ride-card strong {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .ride-card .student-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .btn-delete {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--light-gray);
+            transition: color 0.2s;
+        }
+
+        .btn-delete:hover {
+            color: var(--danger-color);
+        }
+        
+        .btn-contact {
+            background-color: var(--success-color);
+            margin-top: 1rem;
+            padding: 0.6rem;
+            font-size: 0.9rem;
+        }
+
+        .btn-contact:hover {
+            background-color: #218838;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 2rem;
+            color: #6c757d;
+        }
+
+        /* Icon styling */
+        .icon {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
