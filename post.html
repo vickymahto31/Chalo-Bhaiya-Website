@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Ride</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="main.html" class="logo">Chalo Bhaiya</a>
+            <nav>
+                <ul>
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="post.html" class="active">Post a Ride</a></li>
+                    <li><a href="find.html">Find a Ride</a></li>
+                    <li><a href="history.html">Ride History</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Post a Ride Request 📝</h1>
+        
+        <div class="form-container">
+            <h2>Your Ride Details</h2>
+            <form id="ride-form">
+                <div class="form-group">
+                    <label for="student-name">Your Name</label>
+                    <input type="text" id="student-name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-info">Phone Number</label>
+                    <input type="tel" id="contact-info" placeholder="Your 10-digit number" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <label for="pickup-point">Pickup Point in Rajkot</label>
+                    <select id="pickup-point" required>
+                        <option value="" disabled selected>Select a common location</option>
+                        <option value="Trikon Baug">Trikon Baug</option>
+                        <option value="Crystal Mall">Crystal Mall</option>
+                        <option value="Kotecha Chowk">Kotecha Chowk</option>
+                        <option value="Bus Port (ST Stand)">Bus Port (ST Stand)</option>
+                        <option value="Railway Station">Railway Station</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="departure-time">Approx. Departure Time</label>
+                    <input type="text" id="departure-time" placeholder="e.g., Around 5:30 PM" required>
+                </div>
+                <div class="form-group">
+                    <label for="seats">Available Seats</label>
+                    <select id="seats" required>
+                        <option value="1">1 Seat</option>
+                        <option value="2">2 Seats</option>
+                        <option value="3">3 Seats</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Publish Ride Post</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

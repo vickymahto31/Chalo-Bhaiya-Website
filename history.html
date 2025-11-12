@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride History</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="main.html" class="logo">Chalo Bhaiya</a>
+            <nav>
+                <ul>
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="post.html">Post a Ride</a></li>
+                    <li><a href="find.html">Find a Ride</a></li>
+                    <li><a href="history.html" class="active">Ride History</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Completed Shared Rides 📜</h1>
+        
+        <div class="rides-grid">
+            
+            <div class="ride-card">
+                <span class="tag tag-completed">Completed</span>
+                <p style="font-weight: 600; font-size: 1.2em; margin-top: 10px;">Rohit</p>
+                <p><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg> <strong>From:</strong> <span class="pickup-point">Trikon Baug</span></p>
+                <p><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zM12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path></svg> <strong>Time:</strong> <span class="departure-time">6:00 PM (Oct 28)</span></p>
+                <p><strong>Shared By:</strong> Rohit + 2 others</p>
+            </div>
+
+            <div class="ride-card">
+                <span class="tag tag-completed">Completed</span>
+                <p style="font-weight: 600; font-size: 1.2em; margin-top: 10px;">Virat </p>
+                <p><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg> <strong>From:</strong> <span class="pickup-point">Bus Port (ST Stand)</span></p>
+                <p><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zM12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path></svg> <strong>Time:</strong> <span class="departure-time">4:30 PM (Nov 1)</span></p>
+                <p><strong>Shared By:</strong> Virat + 1 other</p>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>

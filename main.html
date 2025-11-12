@@ -3,203 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marwadi AutoShare - Rajkot</title>
+    <title>Chalo Bhaiya - Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* General Styling
-        This section sets up the basic look and feel, like fonts and colors.
-        You can move all the code within this <style> tag to a separate style.css file.
-        */
-        
-    </style>
 </head>
 <body>
 
+    <header>
+        <div class="nav-container">
+            <a href="main.html" class="logo">Chalo Bhaiya</a>
+            <nav>
+                <ul>
+                    <li><a href="main.html" class="active">Home</a></li>
+                    <li><a href="post.html">Post a Ride</a></li>
+                    <li><a href="find.html">Find a Ride</a></li>
+                    <li><a href="history.html">Ride History</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <div class="container">
-        <header>
-            <h1>Chalo Bhaiya</h1>
-            <p>Connect & Share a ride from Rajkot to Campus</p>
-        </header>
-
-        <div class="main-content">
-            <!-- Form to Post a New Ride -->
-            <aside class="form-container">
-                <h2>Post a Ride Request</h2>
-                <form id="ride-form">
-                    <div class="form-group">
-                        <label for="student-name">Your Name</label>
-                        <input type="text" id="student-name" placeholder="Enter your full name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contact-info">Phone Number</label>
-                        <input type="tel" id="contact-info" placeholder="Your 10-digit number" pattern="[0-9]{10}" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="pickup-point">Pickup Point in Rajkot</label>
-                        <select id="pickup-point" required>
-                            <option value="" disabled selected>Select a location</option>
-                            <option value="Trikon Baug">Trikon Baug</option>
-                            <option value="Crystal Mall">Crystal Mall</option>
-                            <option value="Kotecha Chowk">Kotecha Chowk</option>
-                            <option value="Bus Port (ST Stand)">Bus Port (ST Stand)</option>
-                            <option value="Railway Station">Railway Station</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="departure-time">Approx. Departure Time</label>
-                        <input type="text" id="departure-time" placeholder="e.g., Around 5:30 PM" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Find Ride Mates</button>
-                </form>
-            </aside>
-
-            <!-- Section to Display Available Rides -->
-            <main class="rides-container">
-                <h2>Available Rides</h2>
-                <div id="available-rides-list">
-                    <!-- Ride cards will be dynamically inserted here by JavaScript -->
-                    <p class="empty-state">No rides posted yet. Be the first!</p>
+        <h1>Connect. Share. Save. 🤝</h1>
+        <p>Your dedicated platform for Marwadi University students to connect and share auto-rickshaw rides from Rajkot city points to the campus, ensuring the minimum fare possible.</p>
+        
+        <div class="card-section" style="text-align: center; margin-top: 40px;">
+            <h2>How It Works</h2>
+            <div style="display: flex; justify-content: space-around; gap: 20px;">
+                <div style="flex: 1; padding: 20px; border: 1px solid var(--border-light); border-radius: 8px;">
+                    <h3>1. Post ✍️</h3>
+                    <p>Going to campus? Post your pickup point and time on the Post a Ride page.</p>
                 </div>
-            </main>
+                <div style="flex: 1; padding: 20px; border: 1px solid var(--border-light); border-radius: 8px;">
+                    <h3>2. Find 🔎</h3>
+                    <p>Looking for a ride? Browse the list on the Find a Ride page for matching posts.</p>
+                </div>
+                <div style="flex: 1; padding: 20px; border: 1px solid var(--border-light); border-radius: 8px;">
+                    <h3>3. Share & Save 💰</h3>
+                    <p>Contact your ride-mate, share the auto, and split the fare! Simple.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <a href="post.html" class="btn btn-primary" style="margin-right: 15px; padding: 12px 30px;">Post Your Ride Now</a>
+                <a href="find.html" class="btn btn-secondary" style="padding: 12px 30px;">See Available Rides</a>
+            </div>
         </div>
     </div>
 
-    <!-- This is a template for the ride card. JS will use this to create new cards. -->
-    <template id="ride-card-template">
-        <div class="ride-card">
-            <button class="btn-delete" title="Delete this post">&times;</button>
-            <p class="student-name"></p>
-            <p><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg> <strong>From:</strong> <span class="pickup-point"></span></p>
-            <p><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zM12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path></svg> <strong>Time:</strong> <span class="departure-time"></span></p>
-            <button class="btn btn-contact">Contact to Join</button>
-        </div>
-    </template>
-
-
-    <script>
-        // This script makes the page interactive.
-        // If you want, you can also move this to a separate app.js file.
-        
-        // Wait until the whole page is loaded before running the script
-        document.addEventListener('DOMContentLoaded', () => {
-
-            // --- 1. GETTING REFERENCES TO HTML ELEMENTS ---
-            const rideForm = document.getElementById('ride-form');
-            const ridesList = document.getElementById('available-rides-list');
-            const rideCardTemplate = document.getElementById('ride-card-template');
-
-            // --- 2. DATA STORAGE ---
-            // In a real application, this data would come from a database.
-            // For this project, we'll store rides in an array in the browser's localStorage.
-            // This way, the ride list persists even if you refresh the page.
-            let rides = JSON.parse(localStorage.getItem('rides')) || [];
-
-            // --- 3. FUNCTIONS ---
-
-            /**
-             * Renders all the rides from the 'rides' array onto the page.
-             */
-            const renderRides = () => {
-                // Clear the current list
-                ridesList.innerHTML = ''; 
-
-                if (rides.length === 0) {
-                    ridesList.innerHTML = '<p class="empty-state">No rides posted yet. Be the first!</p>';
-                    return;
-                }
-
-                rides.forEach(ride => {
-                    // Clone the template for a new card
-                    const card = rideCardTemplate.content.cloneNode(true);
-                    
-                    // Populate the card with ride data
-                    card.querySelector('.ride-card').dataset.id = ride.id;
-                    card.querySelector('.student-name').textContent = ride.name;
-                    card.querySelector('.pickup-point').textContent = ride.pickup;
-                    card.querySelector('.departure-time').textContent = ride.time;
-
-                    // Add a data attribute to the button to hold the contact number
-                    const contactButton = card.querySelector('.btn-contact');
-                    contactButton.dataset.contact = ride.contact;
-
-                    // Append the new card to the list
-                    ridesList.appendChild(card);
-                });
-            };
-
-            /**
-             * Saves the current 'rides' array to localStorage.
-             */
-            const saveRides = () => {
-                localStorage.setItem('rides', JSON.stringify(rides));
-            };
-            
-            // --- 4. EVENT LISTENERS ---
-            
-            /**
-             * Handles the form submission to add a new ride.
-             */
-            rideForm.addEventListener('submit', (event) => {
-                // Prevent the default form action (which would reload the page)
-                event.preventDefault();
-
-                // Create a new ride object from the form values
-                const newRide = {
-                    id: Date.now(), // A simple unique ID based on the current time
-                    name: document.getElementById('student-name').value.trim(),
-                    contact: document.getElementById('contact-info').value.trim(),
-                    pickup: document.getElementById('pickup-point').value,
-                    time: document.getElementById('departure-time').value.trim(),
-                };
-
-                // Add the new ride to our array
-                rides.unshift(newRide); // unshift adds to the beginning
-
-                // Save and re-render the list
-                saveRides();
-                renderRides();
-
-                // Reset the form for the next entry
-                rideForm.reset();
-            });
-
-            /**
-             * Handles clicks inside the rides list (for deleting or contacting).
-             * This uses "event delegation" - one listener on the parent handles all child clicks.
-             */
-            ridesList.addEventListener('click', (event) => {
-                const target = event.target;
-                
-                // Case 1: The 'Delete' button was clicked
-                if (target.classList.contains('btn-delete')) {
-                    const card = target.closest('.ride-card');
-                    const rideId = Number(card.dataset.id);
-
-                    // Confirm before deleting
-                    if (confirm('Are you sure you want to delete this ride post?')) {
-                        // Filter out the ride to be deleted
-                        rides = rides.filter(ride => ride.id !== rideId);
-                        
-                        // Save and re-render
-                        saveRides();
-                        renderRides();
-                    }
-                }
-                
-                // Case 2: The 'Contact' button was clicked
-                if (target.classList.contains('btn-contact')) {
-                    const contactInfo = target.dataset.contact;
-                    alert(`To join the ride, please contact the student at: ${contactInfo}`);
-                }
-            });
-
-            // --- 5. INITIAL RENDER ---
-            // Render the initial list of rides when the page first loads.
-            renderRides();
-        });
-    </script>
 </body>
 </html>
